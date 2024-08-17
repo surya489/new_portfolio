@@ -1,0 +1,28 @@
+.button {
+    display: block;
+    text-align: center;
+    line-height: 1;
+    padding: 10px 20px;
+    max-width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    transition: all .3s;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.button.primary {
+    background: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.button.primary:hover {
+    color: var(--yellow);
+    background: transparent;
+}
+
+.button.bordered_btn:hover {
+    background: var(--blue);
+    color: var(--bg_white);
+    border-color: var(--blue);
+}

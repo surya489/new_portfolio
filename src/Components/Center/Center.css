@@ -1,0 +1,14 @@
+.center {
+    padding: 60px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.center.py_0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.center+.center {
+    padding-top: 0;
+}

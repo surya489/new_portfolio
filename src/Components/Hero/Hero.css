@@ -1,0 +1,21 @@
+.primary {
+    color: var(--yellow);
+    letter-spacing: 1.5px;
+}
+
+.hero_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col_50 {
+    width: 50%;
+}
+
+.btn_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
