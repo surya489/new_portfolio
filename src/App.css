@@ -6,3 +6,7 @@
   --grayish_purple: #9A9FA8;
   --bg_white: #FFFFFF;
 }
+
+.App {
+  position: relative;
+}

@@ -1,9 +1,21 @@
+.navbar {
+    box-sizing: border-box;
+}
+
+.navbar.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
 .nav_wrap {
+    font-family: 'Comfortaa';
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    box-sizing: border-box;
 }
 
 .menu_items {

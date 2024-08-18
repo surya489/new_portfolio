@@ -1,5 +1,6 @@
 import './App.css';
 
+import './assets/Fonts/Fonts.css';
 import NavBar from './Components/NavBar/NavBar';
 import Hero from './Components/Hero/Hero';
 import Projects from './Components/Projects/Projects';
