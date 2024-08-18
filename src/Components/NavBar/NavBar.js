@@ -26,7 +26,7 @@ const NavBar = () => {
     return (
         <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
             <Center noPaddingY>
-                <div className="nav_wrap">
+                <div className="nav_wrap Comfortaa">
                     <div className="logo_text">
                         <a href="/">Jaya Surya</a>
                     </div>

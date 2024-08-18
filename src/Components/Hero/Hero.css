@@ -19,3 +19,12 @@
     align-items: center;
     gap: 20px;
 }
+
+.intro {
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.description {
+    color: var(--grayish_purple);
+}

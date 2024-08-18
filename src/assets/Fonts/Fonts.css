@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: 'Nonito';
+    font-family: 'Nunito';
     src: url('../Fonts/Nunito/Nunito-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -20,8 +20,35 @@
 }
 
 @font-face {
+    font-family: 'PlayfairDisplayBold';
+    src: url('../Fonts/playfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Roboto';
     src: url('../Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+}
+
+.Comfortaa {
+    font-family: 'Comfortaa';
+}
+
+.Nunito {
+    font-family: 'Nunito';
+}
+
+.PlayfairDisplay {
+    font-family: 'PlayfairDisplay';
+}
+
+.PlayfairDisplayBold {
+    font-family: 'PlayfairDisplayBold';
+}
+
+.Roboto {
+    font-family: 'Roboto';
 }

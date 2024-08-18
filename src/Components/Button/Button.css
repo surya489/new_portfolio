@@ -2,16 +2,19 @@
     display: block;
     text-align: center;
     line-height: 1;
-    padding: 10px 20px;
+    padding: 8px 16px;
     max-width: 100px;
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all .3s;
     color: var(--blue);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 14px;
 }
 
 .button.primary {
+    background: var(--yellow);
     background: var(--yellow);
     border-color: var(--yellow);
 }
@@ -25,4 +28,13 @@
     background: var(--blue);
     color: var(--bg_white);
     border-color: var(--blue);
+}
+
+/* Overlay Link */
+
+.linkOverlay {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
 }

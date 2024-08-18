@@ -2,9 +2,10 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, className }) => {
-    const buttonClass = `button ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
-    const downloadClass = `button download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
+const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, className, hasOverlay }) => {
+    const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
+    const downloadClass = `button Roboto download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
+    const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
 
     if (isLink) {
         return (
@@ -18,6 +19,12 @@ const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, classNam
                 {children}
             </a>
         );
+    } else if (hasOverlay) {
+        return (
+            <a href={link} className={overlayClass}>
+                {children}
+            </a>
+        )
     }
     return (
         <button className={buttonClass} >

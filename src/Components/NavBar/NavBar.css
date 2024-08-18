@@ -1,15 +1,21 @@
 .navbar {
     box-sizing: border-box;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
 }
 
 .navbar.sticky {
     position: sticky;
     top: 0;
     left: 0;
+    background: linear-gradient(145deg, #fff, #f0f0f0);
+    border-bottom-color: #e0e4e7;
+    box-shadow: 0 4px 8px #0000001a;
+    z-index: 9;
 }
 
 .nav_wrap {
-    font-family: 'Comfortaa';
     display: flex;
     flex-wrap: nowrap;
     align-items: center;

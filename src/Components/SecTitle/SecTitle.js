@@ -3,7 +3,11 @@ import './SecTitle.css';
 
 const SecTitle = ({ tag: Tag, children }) => {
     return (
-        <Tag className="section_title">{children}</Tag>
+        <Tag className="section_title PlayfairDisplayBold">
+            <span>
+                {children}
+            </span>
+        </Tag>
     );
 };
 

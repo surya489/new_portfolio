@@ -1,0 +1,25 @@
+.section_title {
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.section_title span {
+    width: max-content;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.section_title span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: var(--yellow);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    border-radius: 5px;
+}

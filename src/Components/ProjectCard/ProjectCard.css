@@ -1,0 +1,94 @@
+.card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project_card {
+    width: calc(33.33% - 20px);
+}
+
+.project_details {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: all .5s;
+}
+
+.bg_overlay {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: rgb(253, 196, 53, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.project_content {
+    padding: 20px;
+    margin: 20px;
+    background: var(--yellow);
+    background: rgb(253, 196, 53, 0.8);
+    background: rgb(255, 255, 255, .8);
+    border-radius: 10px;
+    max-height: 100px;
+    overflow: scroll;
+}
+
+.project_content::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 10px;
+}
+
+.project_name {
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.project_desc {
+    padding-bottom: 10px;
+    line-height: 1.4;
+}
+
+.image_wrap {
+    position: relative;
+    width: 100%;
+}
+
+.sizer {
+    padding-top: 56.25%;
+}
+
+.bg_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.linkOverlay {
+    border-radius: 10px;
+}
+
+.linkOverlay:hover .bg_overlay {
+    top: 0;
+}
+
+.linkOverlay:hover .project_details {
+    top: 0;
+}

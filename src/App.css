@@ -10,3 +10,69 @@
 .App {
   position: relative;
 }
+
+.mb_10 {
+  margin-bottom: 10px;
+}
+
+.mb_20 {
+  margin-bottom: 20px;
+}
+
+.f_16 {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.f_14 {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.f_20 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+a {
+  color: var(--blue);
+}
+
+.d_flex {
+  display: flex;
+}
+
+.gap_15 {
+  gap: 15px;
+}
+
+.gap_20 {
+  gap: 20px;
+}
+
+.pb_20 {
+  padding-bottom: 20px;
+}
+
+.pb_30 {
+  padding-bottom: 30px;
+}
