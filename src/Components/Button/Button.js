@@ -2,7 +2,7 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, className, hasOverlay }) => {
+const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, className, hasOverlay, isSubmit, submitBtnVal, submitBtnId, submitBtnClass }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const downloadClass = `button Roboto download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
@@ -24,6 +24,10 @@ const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, classNam
             <a href={link} className={overlayClass}>
                 {children}
             </a>
+        )
+    } else if (isSubmit) {
+        return (
+            <input type="submit" value={submitBtnVal} id={submitBtnId} className={`${submitBtnClass ? submitBtnClass : ''}`} />
         )
     }
     return (
