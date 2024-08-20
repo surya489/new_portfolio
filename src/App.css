@@ -5,10 +5,17 @@
   --bg_gray: #F9FAFF;
   --grayish_purple: #9A9FA8;
   --bg_white: #FFFFFF;
+  --red: #ff0000;
 }
 
 .App {
+  transition: all .5s;
   position: relative;
+}
+
+.App.stopScroll {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .mb_10 {
