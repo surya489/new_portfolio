@@ -6,24 +6,37 @@ import Popup from "../Popup/Popup";
 const ProjectCard = ({ projects }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState('');
+    const [ProjectName, setProjectName] = useState('');
+    const [description, setDescription] = useState('');
+    const [link, setLink] = useState('');
 
-    const openPopup = (imageSrc) => {
+    const openPopup = (imageSrc, name, desc, link) => {
         setSelectedImage(imageSrc);
+        setProjectName(name);
+        setDescription(desc);
+        setLink(link);
         setIsPopupOpen(true);
-        window.scrollTo(0, 0);
         document.querySelector('.App').classList.add('stopScroll');
     };
 
     const closePopup = () => {
         setIsPopupOpen(false);
         setSelectedImage('');
+        setProjectName('');
+        setDescription('');
+        setLink('');
         document.querySelector('.App').classList.remove('stopScroll');
     };
 
     return (
-        <div className="card_wrap gap_20">
+        <div className="card_wrap">
             {projects.map((project, index) => (
                 <div className="project_card" key={index}>
+                    {/* <div className="create_using">
+                        {project.CreateUsing && project.CreateUsing.map((item, itemIndex) => (
+                            <span key={itemIndex} className={`tech-item-${itemIndex}`}>{item}</span>
+                        ))}
+                    </div> */}
                     <Button hasOverlay>
                         <div className="bg_overlay"></div>
                         <div className="project_details">
@@ -33,7 +46,7 @@ const ProjectCard = ({ projects }) => {
                                 <Button
                                     isPrimary
                                     isPopup
-                                    openPopup={() => openPopup(project.src)}
+                                    openPopup={() => openPopup(project.src, project.name, project.desc, project.link)}
                                 >
                                     View
                                 </Button>
@@ -49,7 +62,7 @@ const ProjectCard = ({ projects }) => {
                     </Button>
                 </div>
             ))}
-            <Popup src={selectedImage} className={`${isPopupOpen ? 'open' : 'close'}`} closePopup={closePopup} />
+            <Popup src={selectedImage} projectName={ProjectName} projectdesc={description} projectLink={link} className={`${isPopupOpen ? 'open' : 'close'}`} closePopup={closePopup} />
         </div>
     );
 };

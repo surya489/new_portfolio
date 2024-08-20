@@ -2,14 +2,14 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup }) => {
+const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const downloadClass = `button Roboto download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
 
     if (isLink) {
         return (
-            <a href={link} className={buttonClass}>
+            <a href={link} className={buttonClass} target={isTarget ? '_blank' : '_self'} rel={isTarget ? 'noopener noreferrer' : ''}>
                 {children}
             </a>
         )
@@ -27,7 +27,7 @@ const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasO
         )
     } else if (isPopup) {
         return (
-            <div className={buttonClass} onClick={openPopup}>
+            <div className={buttonClass} target={isTarget ? '_blank' : '_self'} rel={isTarget ? 'noopener noreferrer' : ''} onClick={openPopup}>
                 {children}
             </div>
         )

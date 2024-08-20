@@ -1,13 +1,31 @@
 import React from "react";
 
 import './Popup.css';
+import Button from "../Button/Button";
 
-const Popup = ({ src, closePopup, className }) => {
+const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLink }) => {
     return (
         <div className={`popup_overlay ${className ? className : ''}`} onClick={closePopup}>
             <div className="popup_content" onClick={(e) => e.stopPropagation()}>
                 <span className="close_btn" onClick={closePopup}></span>
-                <img src={src} alt="Project" />
+                <div className="popup_content_body">
+                    <div className="project_contents col_50">
+                        <div className="project_name Comfortaa primary">{projectName}</div>
+                        <p className="Nunito">{projectdesc}</p>
+                    </div>
+                    <div className="col_50 popup_right">
+                        <div className="view_btn_wrap">
+                            <Button isTarget isLink link={projectLink}>View Site</Button>
+                        </div>
+                        <div className="img_wrap">
+                            <div className="sizer"></div>
+                            <div
+                                className="bg_image"
+                                style={{ backgroundImage: `url(${src})` }}
+                            ></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

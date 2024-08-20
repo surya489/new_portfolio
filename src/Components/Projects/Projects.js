@@ -13,19 +13,24 @@ import eCommercePage from '../../assets/images/E-Commerce-Page.png';
 import toolTip from '../../assets/images/Tooltip.png';
 import blogPage from '../../assets/images/Vite-React.png';
 import datePicker from '../../assets/images/Date-Picker.png';
+import elicap from '../../assets/images/Elicap.png';
 
 const Projects = () => {
     const projects = [
         {
             name: 'Product Layout',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
-            src: eCommercerCarousel
+            link: 'https://ecommerce-carousel.netlify.app/',
+            src: eCommercerCarousel,
+            CreateUsing: [
+                "Test",
+                "Test"
+            ]
         },
         {
             name: 'Youtube Clone',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
+            link: 'https://surya-youtube-clone.netlify.app/',
             src: youtubeClone
         },
         {
@@ -37,13 +42,13 @@ const Projects = () => {
         {
             name: 'E-Commerce Site',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
+            link: 'http://www.customdesign.in/',
             src: eCommercePage
         },
         {
             name: 'Date Picker',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
+            link: 'https://date-picker-add-reminder.netlify.app/',
             src: datePicker
         },
         {
@@ -55,8 +60,14 @@ const Projects = () => {
         {
             name: 'Tool-Tip Layout',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
+            link: 'https://tooltip-landing-page.netlify.app/',
             src: toolTip
+        },
+        {
+            name: 'Elicap',
+            desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+            link: 'https://elicap.netlify.app/',
+            src: elicap
         },
     ]
     return (
