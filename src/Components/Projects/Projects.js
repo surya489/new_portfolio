@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { forwardRef } from "react";
 import "./Projects.css";
 import Center from "../Center/Center";
 import SecTitle from "../SecTitle/SecTitle";
@@ -15,7 +14,7 @@ import blogPage from '../../assets/images/Vite-React.png';
 import datePicker from '../../assets/images/Date-Picker.png';
 import elicap from '../../assets/images/Elicap.png';
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
     const projects = [
         {
             name: 'Product Layout',
@@ -72,12 +71,12 @@ const Projects = () => {
     ]
     return (
         <Center>
-            <div className="pb_30">
+            <div className="pb_30" ref={ref}>
                 <SecTitle tag="h2">Projects</SecTitle>
             </div>
             <ProjectCard projects={projects} />
         </Center>
-    )
-}
+    );
+});
 
 export default Projects;

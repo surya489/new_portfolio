@@ -1,13 +1,12 @@
-import React from "react";
-
+import React, { forwardRef } from "react";
 import './Hero.css';
 import Center from "../Center/Center";
 import Button from "../Button/Button";
 
-const Hero = ({ jobTitle, name }) => {
+const Hero = forwardRef(({ jobTitle, name }, ref) => {
     return (
         <Center>
-            <div className="hero_wrap">
+            <div className="hero_wrap" ref={ref}>
                 <div className="left col_50">
                     <div className="job_title f_16 mb_10 Nunito primary">{jobTitle}</div>
                     <h1 className="intro mb_20 PlayfairDisplayBold">
@@ -19,15 +18,15 @@ const Hero = ({ jobTitle, name }) => {
                     </div>
                     <div className="btn_wrap">
                         <Button isPrimary isLink link='/'>Projects</Button>
-                        <Button isLink link='https://www.linkedin.com/in/jayasurya4899/'>Linkedin</Button>
+                        <Button isLink link='https://www.linkedin.com/in/jayasurya4899/'>LinkedIn</Button>
                     </div>
                 </div>
                 <div className="right col_50">
-                    <div class="curve"></div>
+                    <div className="curve"></div>
                 </div>
             </div>
         </Center>
-    )
-}
+    );
+});
 
 export default Hero;

@@ -15,6 +15,7 @@
 }
 
 .button.primary {
+    color: var(--blue);
     background: var(--yellow);
     background: var(--yellow);
     border-color: var(--yellow);
