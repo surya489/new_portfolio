@@ -17,7 +17,7 @@ const Form = () => {
             </div>
             <div className="input_field">
                 <label for='message'>Message</label>
-                <textarea rows="20" col='20' name="message" id="message" className="" />
+                <textarea rows="10" col='10' name="message" id="message" className="" />
             </div>
             <div>
                 <Button isSubmit submitBtnVal='Send' submitBtnId='submit_btn' submitBtnClass="submit_btn" />

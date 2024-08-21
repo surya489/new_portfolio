@@ -7,11 +7,14 @@
   --bg_white: #FFFFFF;
   --red: #ff0000;
   --black: #000;
+  --bg_blue: #d3d9f3;
 }
 
 .App {
+  background: var(--bg_gray);
   transition: all .5s;
   position: relative;
+  background: var(--bg_blue);
 }
 
 .App.stopScroll {
