@@ -17,8 +17,8 @@ const Hero = forwardRef(({ jobTitle, name }, ref) => {
                         I'm a Front-end Developer passionate about designing user-friendly interfaces and responsive layouts. I love solving complex problems and am always eager to learn new technologies.
                     </div>
                     <div className="btn_wrap">
-                        <Button isPrimary isLink link='/'>Projects</Button>
-                        <Button isLink link='https://www.linkedin.com/in/jayasurya4899/'>LinkedIn</Button>
+                        <Button isPrimary isLink isTarget link='https://www.linkedin.com/in/jayasurya4899/'>LinkedIn</Button>
+                        <Button isLink isTarget link='https://github.com/surya489'>Git Hub</Button>
                     </div>
                 </div>
                 <div className="right col_50">

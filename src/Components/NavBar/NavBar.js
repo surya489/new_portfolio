@@ -25,11 +25,15 @@ const NavBar = () => {
     }, []);
 
     const scrollToProjects = () => {
-        projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const top = projectsRef.current.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
     };
 
     const scrollToTop = () => {
-        pageRef.current.scrollIntoView({ behavior: 'smooth' });
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const top = pageRef.current.getBoundingClientRect().top + window.scrollY - (navbarHeight + 40);
+        window.scrollTo({ top, behavior: 'smooth' });
     }
 
     return (
