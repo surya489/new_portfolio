@@ -14,10 +14,10 @@ const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLi
                         <p className="Nunito">{projectdesc}</p>
                     </div>
                     <div className="col_50 popup_right">
-                        <div className="view_btn_wrap">
-                            <Button isTarget isLink link={projectLink}>View Site</Button>
-                        </div>
                         <div className="img_wrap">
+                            <div className="view_btn_wrap">
+                                <Button isTarget isLink link={projectLink}>View Site</Button>
+                            </div>
                             <div className="sizer"></div>
                             <div
                                 className="bg_image"

@@ -22,6 +22,7 @@
 
 .popup_content {
     max-width: 700px;
+    min-width: 700px;
     max-height: 600px;
     border-radius: 10px;
     margin: auto;
@@ -89,12 +90,9 @@
     overflow: hidden;
 }
 
-.popup_right {
-    cursor: pointer;
-}
-
 .popup_content_body .img_wrap {
     position: relative;
+    overflow: hidden;
 }
 
 .view_btn_wrap {
@@ -113,6 +111,6 @@
     cursor: default;
 }
 
-.popup_right:hover .view_btn_wrap {
+.img_wrap:hover .view_btn_wrap {
     transform: translate(0%, -100%);
 }
