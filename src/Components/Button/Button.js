@@ -2,14 +2,14 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, className, hasOverlay, isSubmit, submitBtnVal, submitBtnId, submitBtnClass }) => {
+const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const downloadClass = `button Roboto download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
 
     if (isLink) {
         return (
-            <a href={link} className={buttonClass}>
+            <a href={link} className={buttonClass} target={isTarget ? '_blank' : '_self'} rel={isTarget ? 'noopener noreferrer' : ''}>
                 {children}
             </a>
         )
@@ -21,9 +21,15 @@ const Button = ({ isBtn, isLink, isDownload, link, isPrimary, children, classNam
         );
     } else if (hasOverlay) {
         return (
-            <a href={link} className={overlayClass}>
+            <div className={overlayClass}>
                 {children}
-            </a>
+            </div>
+        )
+    } else if (isPopup) {
+        return (
+            <div className={buttonClass} target={isTarget ? '_blank' : '_self'} rel={isTarget ? 'noopener noreferrer' : ''} onClick={openPopup}>
+                {children}
+            </div>
         )
     } else if (isSubmit) {
         return (
