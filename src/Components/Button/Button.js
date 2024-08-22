@@ -2,11 +2,12 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget, submitBtnVal, submitBtnId, submitBtnClass, isSubmit }) => {
+const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget, submitBtnVal, submitBtnId, isSubmit, alignRight, alignCenter, alignLeft }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
-    const downloadClass = `button Roboto download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
+    const downloadClass = `button button download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
-
+    const submitBtnClass = `button button primary ${className || ''}`;
+    const submitBtnAlign = alignRight ? 'alignRight' : alignLeft ? 'alignLeft' : 'alignCenter';
     if (isLink) {
         return (
             <a href={link} className={buttonClass} target={isTarget ? '_blank' : '_self'} rel={isTarget ? 'noopener noreferrer' : ''}>
@@ -33,7 +34,7 @@ const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasO
         )
     } else if (isSubmit) {
         return (
-            <input type="submit" value={submitBtnVal} id={submitBtnId} className={`${submitBtnClass ? submitBtnClass : ''}`} />
+            <input type="submit" value={submitBtnVal} id={submitBtnId} className={`${submitBtnClass} ${submitBtnAlign}`} />
         )
     }
     return (

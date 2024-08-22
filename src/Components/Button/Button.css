@@ -40,3 +40,15 @@
     position: relative;
     overflow: hidden;
 }
+
+.button.alignCenter {
+    margin: auto;
+}
+
+.button.alignLeft {
+    margin-left: auto;
+}
+
+.button.alignRight {
+    margin-right: auto;
+}
