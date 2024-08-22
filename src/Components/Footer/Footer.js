@@ -1,14 +1,16 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
 import './Footer.css';
 import Center from "../Center/Center";
 import Contact from "../Contact/Contact";
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
     return (
         <Center>
-            <Contact />
+            <div ref={ref}>
+                <Contact />
+            </div>
         </Center>
-    )
-}
+    );
+});
 
 export default Footer;
