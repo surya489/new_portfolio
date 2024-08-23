@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <div>
             <div className="pb_30">
-                <SecTitle tag="h2">Contact Us</SecTitle>
+                <SecTitle tag="h2">Let’s Connect</SecTitle>
             </div>
             <Form />
         </div>

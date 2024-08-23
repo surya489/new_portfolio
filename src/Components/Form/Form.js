@@ -13,11 +13,11 @@ const Form = () => {
 
     const formValidate = () => {
         if (nameField.trim() === '') {
-            setError('Name Field cannot be empty')
+            setError('I’d love to know your name. Could you please provide it?');
         } else if (emailField.trim() === '') {
-            setError('E-mail Field cannot be empty');
+            setError('Your email address is important to me. Please enter it.');
         } else if (message.trim() === '') {
-            setError('Message Field cannot be empty')
+            setError('I value your thoughts. Could you please leave a message?');
         } else {
             resetForm();
         }
@@ -38,7 +38,7 @@ const Form = () => {
     return (
         <form className="contact_form" onSubmit={handleSubmit}>
             <div className="input_field">
-                <label for='name'>Name<span className="required">*</span></label>
+                <label htmlFor='name'>Name<span className="required">*</span></label>
                 <div>
                     <input
                         type="text"
@@ -51,7 +51,7 @@ const Form = () => {
                 </div>
             </div>
             <div className="input_field">
-                <label for='email'>Email<span className="required">*</span></label>
+                <label htmlFor='email'>Email<span className="required">*</span></label>
                 <input
                     type="email"
                     name="email"
@@ -62,10 +62,10 @@ const Form = () => {
                 />
             </div>
             <div className="input_field">
-                <label for='message'>Message<span className="required">*</span></label>
+                <label htmlFor='message'>Message<span className="required">*</span></label>
                 <textarea
                     rows="10"
-                    col='10'
+                    cols='10'
                     name="message"
                     id="message"
                     className=""

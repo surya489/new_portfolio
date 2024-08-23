@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import "./Projects.css";
 import Center from "../Center/Center";
 import SecTitle from "../SecTitle/SecTitle";
-import ProjectCard from "../ProjectCard/ProjectCard";
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 // Images
 import youtubeClone from '../../assets/images/YouTube-Clone.png';
