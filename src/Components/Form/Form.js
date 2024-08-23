@@ -38,7 +38,7 @@ const Form = () => {
     return (
         <form className="contact_form" onSubmit={handleSubmit}>
             <div className="input_field">
-                <label for='name'>Name</label>
+                <label for='name'>Name<span className="required">*</span></label>
                 <div>
                     <input
                         type="text"
@@ -51,7 +51,7 @@ const Form = () => {
                 </div>
             </div>
             <div className="input_field">
-                <label for='email'>Email</label>
+                <label for='email'>Email<span className="required">*</span></label>
                 <input
                     type="email"
                     name="email"
@@ -62,7 +62,7 @@ const Form = () => {
                 />
             </div>
             <div className="input_field">
-                <label for='message'>Message</label>
+                <label for='message'>Message<span className="required">*</span></label>
                 <textarea
                     rows="10"
                     col='10'

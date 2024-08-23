@@ -7,7 +7,9 @@ import SecTitle from "../SecTitle/SecTitle";
 const Contact = () => {
     return (
         <div>
-            <SecTitle tag="h2">Contact Us</SecTitle>
+            <div className="pb_30">
+                <SecTitle tag="h2">Contact Us</SecTitle>
+            </div>
             <Form />
         </div>
     )

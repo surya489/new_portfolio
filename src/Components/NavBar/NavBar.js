@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
 import './NavBar.css';
-
 import Center from "../Center/Center";
 import Projects from "../Projects/Projects";
 import Hero from "../Hero/Hero";
@@ -12,7 +10,7 @@ const NavBar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const projectsRef = useRef(null);
     const pageRef = useRef(null);
-    const FooterReg = useRef(null);
+    const footerRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,11 +24,17 @@ const NavBar = () => {
         };
     }, []);
 
-    const sectionScroll = (ref, isHome) => {
-        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-        const top = isHome
-            ? ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight - isHome
-            : ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    const sectionScroll = (ref, isHome = false) => {
+        const navbar = document.querySelector('.navbar .nav_wrap');
+        const navbarHeight = navbar.offsetHeight;
+
+        const computedStyles = window.getComputedStyle(navbar);
+        const paddingTop = parseFloat(computedStyles.paddingTop);
+        const paddingBottom = parseFloat(computedStyles.paddingBottom);
+
+        const extraOffset = isHome ? paddingTop + paddingBottom + 1 : 0;
+        const top = ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
+
         window.scrollTo({ top, behavior: 'smooth' });
     }
 
@@ -40,17 +44,17 @@ const NavBar = () => {
                 <Center noPaddingY>
                     <div className="nav_wrap Comfortaa">
                         <div className="logo_text">
-                            <a href="#home" onClick={() => sectionScroll(pageRef, '40')}>Jaya Surya</a>
+                            <a href="#home" onClick={() => sectionScroll(pageRef, true)}>Jaya Surya</a>
                         </div>
                         <ul className="menu_items">
                             <li className="menu_item">
                                 <a href="/" className="">About</a>
                             </li>
                             <li className="menu_item">
-                                <a href="#projects" className="" onClick={() => sectionScroll(projectsRef)}>Projects</a>
+                                <a href="#projects" onClick={() => sectionScroll(projectsRef)}>Projects</a>
                             </li>
                             <li className="menu_item">
-                                <a href="#contact" onClick={() => sectionScroll(FooterReg)} className="">Contact</a>
+                                <a href="#contact" onClick={() => sectionScroll(footerRef)} className="">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -58,7 +62,7 @@ const NavBar = () => {
             </div>
             <Hero ref={pageRef} jobTitle="Front-end Developer" name='Jaya Surya' />
             <Projects ref={projectsRef} />
-            <Footer ref={FooterReg} />
+            <Footer ref={footerRef} />
         </>
     );
 }

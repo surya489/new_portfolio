@@ -1,6 +1,8 @@
 .contact_form {
     max-width: 400px;
     margin: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .input_field {
@@ -8,6 +10,7 @@
 }
 
 .input_field label {
+    position: relative;
     display: block;
     width: max-content;
     padding-bottom: 10px;
@@ -22,6 +25,7 @@
     margin: 0;
     outline: none;
     border: none;
+    border: 1px solid;
     border-radius: 5px;
     padding: 10px 10px;
     box-sizing: border-box;
@@ -37,4 +41,12 @@
 .error.show_error {
     opacity: 1;
     visibility: visible;
+}
+
+.required {
+    font-size: 14px;
+    color: var(--red);
+    position: absolute;
+    top: -2px;
+    right: -6px;
 }

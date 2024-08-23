@@ -2,7 +2,7 @@
     box-sizing: border-box;
     background: transparent;
     border-bottom: 1px solid transparent;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .navbar.sticky {
@@ -13,6 +13,10 @@
     border-bottom-color: #e0e4e7;
     box-shadow: 0 4px 8px #0000001a;
     z-index: 9;
+    transition: al .3s;
+    background: linear-gradient(45deg, rgb(211 217 243), transparent);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .nav_wrap {
