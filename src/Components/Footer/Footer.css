@@ -14,26 +14,26 @@
 }
 
 .footer_wrap .icons span {
-    background: transparent;
+    background: #fff;
     padding: 10px;
     border-radius: 50%;
     text-align: center;
-    transition: all .5s;
+    transition: background .5s linear;
 }
 
 .footer_wrap .icons span:hover {
-    /* background: var(--bg_blue); */
+    background: linear-gradient(331deg, #959ad4, #fff);
 }
 
 .footer_wrap .icon {
     font-size: 25px;
     display: block;
-    /* color: var(--bg_blue); */
-    transition: all .5s;
+    color: var(--blue);
 }
 
 .footer_wrap .icons span:hover .icon {
-    /* color: #fff; */
+    color: #fff;
+    transition: color .2s linear;
 }
 
 .footer_wrap .copyright {

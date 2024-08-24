@@ -1,0 +1,8 @@
+.Typewriter {
+    display: inline-block;
+}
+
+.Typewriter__wrapper,
+.Typewriter__cursor {
+    color: var(--yellow);
+}

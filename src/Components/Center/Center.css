@@ -12,3 +12,15 @@
 .center+.center {
     padding-top: 0;
 }
+
+@media (max-width: 900px) {
+    .center {
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 840px) {
+    .center {
+        padding: 40px 30px;
+    }
+}

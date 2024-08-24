@@ -1,0 +1,9 @@
+@media(max-width: 900px) {
+
+    .col_50,
+    .col_60,
+    .col_40 {
+        width: 100%;
+    }
+
+}

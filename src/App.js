@@ -1,4 +1,5 @@
 import './App.css';
+import './Responsive.css';
 
 import './assets/Fonts/Fonts.css';
 import NavBar from './Components/NavBar/NavBar';

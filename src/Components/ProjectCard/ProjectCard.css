@@ -105,3 +105,27 @@
 .linkOverlay:hover .project_details {
     top: 0;
 }
+
+/* Responsive CSS Start */
+
+@media(max-width: 1200px) {
+
+    .project_card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 840px) {
+    .card_wrap {
+        padding: 0;
+    }
+}
+
+@media (max-width: 740px) {
+    .project_card {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Responsive CSS End */

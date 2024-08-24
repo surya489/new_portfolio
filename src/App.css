@@ -10,10 +10,27 @@
   --bg_blue: #d3d9f3;
 }
 
+.col_50 {
+  width: 50%;
+}
+
+.col_60 {
+  width: 60%;
+}
+
+.col_40 {
+  width: 40%;
+}
+
+.col_100 {
+  width: 100%;
+}
+
 .App {
   background: var(--bg_gray);
-  transition: all .5s;
   position: relative;
+  transition: all .5s;
+  overflow: hidden;
   /* background: var(--bg_blue); */
 }
 
@@ -57,7 +74,7 @@ p {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 54px;
 }
 
 h2 {
