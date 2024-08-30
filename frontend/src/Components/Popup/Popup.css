@@ -12,6 +12,7 @@
     visibility: hidden;
     top: -100%;
     transition: all .5s;
+    z-index: 9;
 }
 
 .popup_overlay.open {
