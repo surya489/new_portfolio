@@ -23,7 +23,7 @@ const Form = () => {
         setError('');
 
         try {
-            const response = await axios.post('https://new-portfolio-8gzn.onrender.com//contactForm', { nameField, emailField, message, mobileField });
+            const response = await axios.post('https://new-portfolio-8gzn.onrender.com/contactForm', { nameField, emailField, message, mobileField });
 
             if (response.status === 200) {
                 setTimeout(() => {
