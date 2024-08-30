@@ -45,6 +45,10 @@
     visibility: visible;
 }
 
+.error.success {
+    color: var(--success);
+}
+
 .required {
     font-size: 14px;
     color: var(--red);

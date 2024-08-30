@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Form.css';
 
 import Button from "../Button/Button";
+import loader from '../../assets/images/loader.png';
 
 const Form = () => {
 
@@ -12,43 +13,48 @@ const Form = () => {
     const [message, setMessage] = useState('');
     const [mobileField, setMobileField] = useState('');
     const [error, setError] = useState("");
-
-    const baseUrl = 'https://new-portfolio-8gzn.onrender.com';
+    const [isLoading, setIsLoading] = useState(false);
+    const [statusClass, setStatusClass] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true);
+        setStatusClass('');
+        setError('');
 
         try {
-            const response = await axios.post('https://new-portfolio-8gzn.onrender.com/contactForm', { nameField, emailField, message, mobileField });
+            const response = await axios.post('http://localhost:3001/contactForm', { nameField, emailField, message, mobileField });
 
             if (response.status === 200) {
-                console.log("Form submitted successfully");
-                setError(response.data.message);
-                resetForm();
-            } else {
-                console.log("Unexpected response status:", response.status);
-                setError('Unexpected error. Please try again.');
-            }
-
-            if (response.status === 400) {
-                alert('hi');
+                setTimeout(() => {
+                    setIsLoading(false);
+                    setStatusClass('success');
+                    setError(response.data.message);
+                    resetForm();
+                }, 2000);
             }
         } catch (err) {
-            console.error("Error submitting form:", err);
-            setError(err.response.data.message);
+            setTimeout(() => {
+                setIsLoading(false);
+                setStatusClass('error');
+                setError(err.response.data.message);
+            }, 2000);
         }
     };
 
     const resetForm = () => {
-        setNameField('');
-        setEmailField('');
-        setMessage('');
-        setMobileField('');
-        setError('');
+        setTimeout(() => {
+            setNameField('');
+            setEmailField('');
+            setMessage('');
+            setMobileField('');
+            setError('');
+            setStatusClass('');
+        }, 3000);
     }
 
     return (
-        <form className="contact_form" onSubmit={handleSubmit}>
+        <form className={`contact_form ${isLoading ? 'loading' : ''}`} onSubmit={handleSubmit}>
             <div className="input_field">
                 <label htmlFor='name'>Name<span className="required">*</span></label>
                 <div>
@@ -92,8 +98,13 @@ const Form = () => {
                     onChange={(e) => setMessage(e.target.value)}
                 />
             </div>
-            <div className={`error ${error ? 'show_error' : ''}`}>{error}</div>
-            <Button alignLeft isSubmit submitBtnVal='Send' submitBtnId='submit_btn' submitBtnClass="submit_btn" />
+            <div className={`error ${error ? 'show_error' : ''} ${statusClass}`}>{error}</div>
+            <div className="btnWrap">
+                <div className="loader">
+                    <img src={loader} alt="loader" />
+                </div>
+                <Button alignLeft isSubmit submitBtnVal='Send' submitBtnId='submit_btn' submitBtnClass="submit_btn" />
+            </div>
         </form>
     )
 }

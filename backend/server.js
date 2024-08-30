@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // CORS configuration with credentials
 app.use(cors({
-    origin: 'https://jaya-surya-portfolio.vercel.app',
+    origin: 'http://localhost:3000',
     methods: ['GET', 'POST'],
     credentials: true
 }));
@@ -115,7 +115,7 @@ app.post('/contactForm', async (req, res) => {
         // Send the email to yourself
         await transporter.sendMail(mailOptionsSelf);
 
-        res.status(200).json({ message: 'Form submitted successfully' });
+        res.status(200).json({ message: 'Thank you for reaching out! Your message has been received, and I’ll get back to you soon. Excited to connect with you!' });
     } catch (err) {
         console.error('Error sending email:', err);
         res.status(500).json({ message: 'Error sending email' });
