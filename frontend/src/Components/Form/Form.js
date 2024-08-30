@@ -13,7 +13,7 @@ const Form = () => {
     const [mobileField, setMobileField] = useState('');
     const [error, setError] = useState("");
 
-    const baseUrl = 'https://new-portfolio-8gzn.onrender.com';
+    const baseUrl = 'https://new-portfolio-8gzn.onrender.com/';
 
     const handleSubmit = async (event) => {
         event.preventDefault();

@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // CORS configuration with credentials
 app.use(cors({
-    origin: 'https://portfolio-jaya-surya.netlify.app', // Adjust this if your frontend is hosted elsewhere
+    origin: 'https://new-portfolio-one-red.vercel.app', // Adjust this if your frontend is hosted elsewhere
     methods: ['GET', 'POST'],
     credentials: true
 }));
