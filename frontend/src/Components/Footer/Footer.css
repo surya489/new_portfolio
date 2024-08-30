@@ -14,7 +14,7 @@
 }
 
 .footer_wrap .icons span {
-    background: #fff;
+    background: var(--bg_white);
     padding: 10px;
     border-radius: 50%;
     text-align: center;
@@ -22,7 +22,7 @@
 }
 
 .footer_wrap .icons span:hover {
-    background: linear-gradient(331deg, #959ad4, #fff);
+    background: linear-gradient(331deg, var(--yellow), var(--bg_white));
 }
 
 .footer_wrap .icon {
@@ -32,7 +32,7 @@
 }
 
 .footer_wrap .icons span:hover .icon {
-    color: #fff;
+    color: var(--bg_white);
     transition: color .2s linear;
 }
 
