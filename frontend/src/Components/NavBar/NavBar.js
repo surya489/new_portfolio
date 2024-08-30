@@ -49,29 +49,41 @@ const NavBar = () => {
 
     return (
         <>
-            <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
+            <div className={`navbar ${isSticky || isMobileMenu ? 'sticky' : ''}`}>
                 <Center noPaddingY>
                     <div className="nav_wrap Comfortaa">
                         <div className="logo_text">
-                            <a href="#home" onClick={() => sectionScroll(pageRef, true)}>Jaya Surya</a>
+                            <a href="#home" onClick={() => {
+                                sectionScroll(pageRef, true)
+                                setIsMobileMenu(false)
+                            }}>Jaya Surya</a>
                         </div>
                         <ul className={`menu_items ${isMobileMenu ? 'active' : ''}`}>
                             <li className="menu_item">
-                                <a href="#home" onClick={() => sectionScroll(pageRef)}>About</a>
+                                <a href="#home" onClick={() => {
+                                    sectionScroll(pageRef)
+                                    setIsMobileMenu(false)
+                                }}>About</a>
                             </li>
                             <li className="menu_item">
-                                <a href="#projects" onClick={() => sectionScroll(projectsRef)}>Projects</a>
+                                <a href="#projects" onClick={() => {
+                                    sectionScroll(projectsRef)
+                                    setIsMobileMenu(false)
+                                }}>Projects</a>
                             </li>
                             <li className="menu_item">
-                                <a href="#contact" onClick={() => sectionScroll(footerRef)}>Contact</a>
+                                <a href="#contact" onClick={() => {
+                                    sectionScroll(footerRef)
+                                    setIsMobileMenu(false)
+                                }}>Contact</a>
                             </li>
                         </ul>
                         <div className={`mobile_menu ${isMobileMenu ? 'active' : ''}`} onClick={openMenu}>
                             <span className="line"></span>
                         </div>
                     </div>
-                </Center>
-            </div>
+                </Center >
+            </div >
             <Hero ref={pageRef} jobTitle="Front-end Developer" name='Jaya Surya' />
             <Projects ref={projectsRef} />
             <Footer ref={footerRef} />

@@ -7,8 +7,8 @@ const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLi
     return (
         <div className={`popup_overlay ${className ? className : ''}`} onClick={closePopup}>
             <div className="popup_content" onClick={(e) => e.stopPropagation()}>
-                <span className="close_btn" onClick={closePopup}></span>
                 <div className="popup_content_body">
+                    <span className="close_btn" onClick={closePopup}></span>
                     <div className="project_contents col_50">
                         <div className="project_name Comfortaa primary">{projectName}</div>
                         <p className="Nunito">{projectdesc}</p>

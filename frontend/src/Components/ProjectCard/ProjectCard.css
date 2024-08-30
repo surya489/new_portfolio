@@ -24,7 +24,7 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .bg_overlay {
@@ -38,7 +38,7 @@
     /* background: rgba(253, 196, 86, 0.2);
     background: rgb(211 217 243); */
     border-radius: 10px;
-    transition: all .5s;
+    transition: all .3s;
 }
 
 .project_content {
