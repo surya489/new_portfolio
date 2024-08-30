@@ -64,7 +64,7 @@ const Footer = forwardRef((props, ref) => {
                     </p>
                 </div>
             </div>
-            <div className="footer_img" style={{ bottom: -(footerWrapHeight + 20) }}>
+            <div className="footer_img" style={{ bottom: -(footerWrapHeight - footerWrapHeight) }}>
                 <img src={vector} alt="" />
             </div>
         </Center>
