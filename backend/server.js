@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // CORS configuration with credentials
 app.use(cors({
-    origin: 'https://jayasurya-portfolio-new.vercel.app',
+    origin: 'https://jayasurya-portfolio-new.vercel.app/',
     methods: ['GET', 'POST'],
     credentials: true
 }));
