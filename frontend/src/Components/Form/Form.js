@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 
 import './Form.css';
 
@@ -9,29 +10,40 @@ const Form = () => {
     const [nameField, setNameField] = useState('');
     const [emailField, setEmailField] = useState('');
     const [message, setMessage] = useState('');
+    const [mobileField, setMobileField] = useState('');
     const [error, setError] = useState("");
 
-    const formValidate = () => {
-        if (nameField.trim() === '') {
-            setError('I’d love to know your name. Could you please provide it?');
-        } else if (emailField.trim() === '') {
-            setError('Your email address is important to me. Please enter it.');
-        } else if (message.trim() === '') {
-            setError('I value your thoughts. Could you please leave a message?');
-        } else {
-            resetForm();
-        }
-    }
+    const baseUrl = 'http://localhost:3001';
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent page reload
-        formValidate();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            const response = await axios.post(`${baseUrl}/contactForm`, { nameField, emailField, message, mobileField });
+
+            if (response.status === 200) {
+                console.log("Form submitted successfully");
+                setError(response.data.message);
+                resetForm();
+            } else {
+                console.log("Unexpected response status:", response.status);
+                setError('Unexpected error. Please try again.');
+            }
+
+            if (response.status === 400) {
+                alert('hi');
+            }
+        } catch (err) {
+            console.error("Error submitting form:", err);
+            setError(err.response.data.message);
+        }
     };
 
     const resetForm = () => {
         setNameField('');
         setEmailField('');
         setMessage('');
+        setMobileField('');
         setError('');
     }
 
@@ -42,9 +54,8 @@ const Form = () => {
                 <div>
                     <input
                         type="text"
-                        name="name"
+                        name="nameField"
                         id="name"
-                        className=""
                         value={nameField}
                         onChange={(e) => setNameField(e.target.value)}
                     />
@@ -53,12 +64,21 @@ const Form = () => {
             <div className="input_field">
                 <label htmlFor='email'>Email<span className="required">*</span></label>
                 <input
-                    type="email"
-                    name="email"
+                    type="text"
+                    name="emailField"
                     id="email"
-                    className=""
                     value={emailField}
                     onChange={(e) => setEmailField(e.target.value)}
+                />
+            </div>
+            <div className="input_field">
+                <label htmlFor='email'>Phone</label>
+                <input
+                    type="tel"
+                    name="mobileField"
+                    id="mobileField"
+                    value={mobileField}
+                    onChange={(e) => setMobileField(e.target.value)}
                 />
             </div>
             <div className="input_field">
@@ -68,14 +88,13 @@ const Form = () => {
                     cols='10'
                     name="message"
                     id="message"
-                    className=""
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
             </div>
             <div className={`error ${error ? 'show_error' : ''}`}>{error}</div>
             <Button alignLeft isSubmit submitBtnVal='Send' submitBtnId='submit_btn' submitBtnClass="submit_btn" />
-        </form >
+        </form>
     )
 }
 
