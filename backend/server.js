@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // CORS configuration with credentials
 app.use(cors({
-    origin: 'https://new-portfolio-one-red.vercel.app', // Adjust this if your frontend is hosted elsewhere
+    origin: 'https://new-portfolio-one-red.vercel.app/',
     methods: ['GET', 'POST'],
     credentials: true
 }));
@@ -72,7 +72,7 @@ app.post('/contactForm', async (req, res) => {
                         <p><strong>Your Message:</strong> ${message}</p>
                         <p><strong>Your Mobile:</strong> ${mobileField}</p>
                     </div>
-                    <p style="font-size: 16px; color: #333;">I will get back to you shortly to discuss further. Meanwhile, feel free to check out some of my latest projects on my <a href="https://portfolio-jaya-surya.netlify.app/" style="color: #4CAF50; text-decoration: none;">portfolio website</a>.</p>
+                    <p style="font-size: 16px; color: #333;">I will get back to you shortly to discuss further. Meanwhile, feel free to check out some of my latest projects on my <a href="https://new-portfolio-one-red.vercel.app//" style="color: #4CAF50; text-decoration: none;">portfolio website</a>.</p>
                     <p style="font-size: 16px; color: #333;">Looking forward to our collaboration!</p>
                     <div style="text-align: center; padding-top: 20px;">
                         <p style="font-size: 16px; color: #333;">Best Regards,</p>
