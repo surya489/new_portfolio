@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import './NavBar.css';
 import Center from "../Center/Center";
 import Projects from "../Projects/Projects";
@@ -36,16 +37,11 @@ const NavBar = () => {
         const top = ref.current.getBoundingClientRect().top + window.scrollY - navbarHeight - extraOffset;
 
         window.scrollTo({ top, behavior: 'smooth' });
-    }
+    };
 
     const openMenu = () => {
-        setIsMobileMenu(!isMobileMenu); // Toggle mobile menu state
-        if (!isMobileMenu) {
-            // document.querySelector('.App').classList.add('stopScroll');
-        } else {
-            // document.querySelector('.App').classList.remove('stopScroll');
-        }
-    }
+        setIsMobileMenu(!isMobileMenu);
+    };
 
     return (
         <>
@@ -53,28 +49,30 @@ const NavBar = () => {
                 <Center noPaddingY>
                     <div className="nav_wrap Comfortaa">
                         <div className="logo_text">
-                            <a href="#home" onClick={() => {
-                                sectionScroll(pageRef, true)
-                                setIsMobileMenu(false)
-                            }}>Jaya Surya</a>
+                            <Link to="/" onClick={() => {
+                                sectionScroll(pageRef, true);
+                                setIsMobileMenu(false);
+                            }}>Jaya Surya</Link>
                         </div>
                         <ul className={`menu_items ${isMobileMenu ? 'active' : ''}`}>
                             <li className="menu_item">
-                                <a href="#home" onClick={() => {
-                                    sectionScroll(pageRef)
-                                    setIsMobileMenu(false)
-                                }}>About</a>
+                                <Link to="/about" onClick={() => {
+                                    sectionScroll(pageRef);
+                                    setIsMobileMenu(false);
+                                }}>About</Link>
                             </li>
                             <li className="menu_item">
-                                <a href="#projects" onClick={() => {
-                                    sectionScroll(projectsRef)
-                                    setIsMobileMenu(false)
+                                <a href="#projects" onClick={(e) => {
+                                    e.preventDefault();
+                                    sectionScroll(projectsRef);
+                                    setIsMobileMenu(false);
                                 }}>Projects</a>
                             </li>
                             <li className="menu_item">
-                                <a href="#contact" onClick={() => {
-                                    sectionScroll(footerRef)
-                                    setIsMobileMenu(false)
+                                <a href="#contact" onClick={(e) => {
+                                    e.preventDefault();
+                                    sectionScroll(footerRef);
+                                    setIsMobileMenu(false);
                                 }}>Contact</a>
                             </li>
                         </ul>
@@ -82,8 +80,8 @@ const NavBar = () => {
                             <span className="line"></span>
                         </div>
                     </div>
-                </Center >
-            </div >
+                </Center>
+            </div>
             <Hero ref={pageRef} jobTitle="Front-end Developer" name='Jaya Surya' />
             <Projects ref={projectsRef} />
             <Footer ref={footerRef} />

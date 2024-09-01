@@ -87,6 +87,7 @@
 
 .popup_content_body .col_50 {
     position: relative;
+    box-sizing: border-box;
     width: calc(50% - 60px);
     margin: 30px 30px;
     overflow: hidden;
@@ -115,4 +116,21 @@
 
 .img_wrap:hover .view_btn_wrap {
     transform: translate(0%, -100%);
+}
+
+@media(max-width: 740px) {
+    .popup_content_body .col_50 {
+        width: 100%;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .popup_content_body .project_contents {
+        padding-bottom: 0px;
+    }
+
+    .project_contents p {
+        font-size: 14px;
+        line-height: 1.2;
+    }
 }
