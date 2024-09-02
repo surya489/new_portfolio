@@ -41,7 +41,7 @@ const Projects = forwardRef((props, ref) => {
         {
             name: 'E-Commerce Site',
             desc: 'This E-Commerce site is a static website designed and developed using HTML, CSS, and JavaScript. The project serves as a showcase of a modern online store, offering users a clean and visually appealing interface for exploring and purchasing products.',
-            link: 'http://www.customdesign.in/',
+            link: 'https://cara-designs.netlify.app/',
             src: eCommercePage
         },
         {
