@@ -1,0 +1,7 @@
+.biography_text {
+    padding-bottom: 10px;
+}
+
+.biography_text:last-child {
+    padding: 0;
+}

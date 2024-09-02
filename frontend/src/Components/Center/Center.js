@@ -2,9 +2,10 @@ import React from "react";
 
 import './Center.css';
 
-const Center = ({ children, noPaddingY }) => {
+const Center = ({ children, noPaddingY, className }) => {
+    const myClass = 'center';
     return (
-        <div className={`center ${noPaddingY ? 'py_0' : ''}`}>
+        <div className={`${noPaddingY ? 'py_0' : ''} ${className ? className + " " + myClass : myClass}`}>
             {children}
         </div>
     )

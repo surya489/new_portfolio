@@ -72,7 +72,7 @@ const Projects = forwardRef((props, ref) => {
     return (
         <Center>
             <div className="pb_30" ref={ref}>
-                <SecTitle tag="h2">Projects</SecTitle>
+                <SecTitle tag="h2">My Creative Endeavors</SecTitle>
             </div>
             <ProjectCard projects={projects} />
         </Center>

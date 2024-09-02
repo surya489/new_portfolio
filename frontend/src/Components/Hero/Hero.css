@@ -1,3 +1,12 @@
+/* .hero_section {
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+} */
+
 .primary {
     color: var(--yellow);
     letter-spacing: 1.5px;

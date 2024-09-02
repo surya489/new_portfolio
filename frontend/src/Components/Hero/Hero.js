@@ -4,10 +4,11 @@ import Center from "../Center/Center";
 import Button from "../Button/Button";
 import TypeWriterText from "../TypeWriterText/TypeWriterText";
 
-const Hero = forwardRef(({ jobTitle, name }, ref) => {
+const Hero = forwardRef(({ jobTitle, name, headerHeight }, ref) => {
+
     return (
-        <Center>
-            <div className="hero_wrap" ref={ref}>
+        <Center className='hero_section'>
+            <div className="hero_wrap" style={{ marginTop: headerHeight }} ref={ref}>
                 <div className="left col_100">
                     <div className="job_title f_16 mb_10 Nunito primary">{jobTitle}</div>
                     <h1 className="intro mb_20 PlayfairDisplayBold">
