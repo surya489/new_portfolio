@@ -52,3 +52,27 @@
 .button.alignRight {
     margin-right: auto;
 }
+
+.button.download {
+    display: block;
+    position: fixed;
+    top: 150px;
+    right: -70px;
+    transform: rotate(90deg);
+    z-index: 99;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.6);
+    background: linear-gradient(45deg, var(--pale_periwinkle), transparent);
+    width: 100%;
+    min-width: max-content;
+    opacity: 0.5;
+    border-color: var(--bg_white);
+    transition: all .3s;
+}
+
+.button.download:hover {
+    opacity: 1;
+    color: var(--black);
+    border-color: var(--bg_white);
+    background: linear-gradient(45deg, var(--pale_periwinkle), transparent);
+}

@@ -34,8 +34,6 @@
     left: 0;
     background: rgb(253, 196, 53, 0.2);
     z-index: 1;
-    /* background: rgba(253, 196, 86, 0.2);
-    background: rgb(211 217 243); */
     border-radius: 10px;
     transition: all .3s;
 }

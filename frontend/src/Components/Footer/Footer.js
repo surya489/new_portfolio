@@ -17,16 +17,16 @@ const Footer = forwardRef((props, ref) => {
     const footerWrapRef = useRef(null);
 
     useEffect(() => {
-        const updateFooterWrapHwight = () => {
+        const updateFooterWrapHeight = () => {
             if (footerWrapRef.current) {
                 setFooterWrapHeight(footerWrapRef.current.offsetHeight);
             }
         }
-        updateFooterWrapHwight();
-        window.addEventListener('resize', updateFooterWrapHwight);
+        updateFooterWrapHeight();
+        window.addEventListener('resize', updateFooterWrapHeight);
 
         return () => {
-            window.addEventListener('resize', updateFooterWrapHwight);
+            window.addEventListener('resize', updateFooterWrapHeight);
         };
     }, [footerWrapRef]);
 
