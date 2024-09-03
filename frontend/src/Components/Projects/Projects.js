@@ -35,7 +35,7 @@ const Projects = forwardRef((props, ref) => {
         {
             name: 'Fitness Guide',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-            link: '/',
+            link: 'https://bright-croissant-8a96cd.netlify.app/',
             src: fitnessGuide
         },
         {
