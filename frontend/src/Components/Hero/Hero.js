@@ -9,18 +9,18 @@ const Hero = forwardRef(({ jobTitle, name, headerHeight }, ref) => {
     return (
         <Center className='hero_section'>
             <div class="container">
-                <div class="blob-container">
-                    <div class="blob"></div>
-                    <div class="blob one"></div>
-                    <div class="blob two"></div>
-                    <div class="blob three"></div>
-                    <div class="blob four"></div>
-                    <div class="blob five"></div>
-                    <div class="blob six"></div>
-                    <div class="blob seven"></div>
-                    <div class="blob eight"></div>
-                    <div class="blob nine"></div>
-                    <div class="blob ten"></div>
+                <div class="dot-container">
+                    <div class="dot"></div>
+                    <div class="dot one"></div>
+                    <div class="dot two"></div>
+                    <div class="dot three"></div>
+                    <div class="dot four"></div>
+                    <div class="dot five"></div>
+                    <div class="dot six"></div>
+                    <div class="dot seven"></div>
+                    <div class="dot eight"></div>
+                    <div class="dot nine"></div>
+                    <div class="dot ten"></div>
                 </div>
                 <div className="section_wrap">
                     <div class="hero_card">

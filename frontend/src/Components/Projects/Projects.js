@@ -13,6 +13,7 @@ import toolTip from '../../assets/images/Tooltip.png';
 import blogPage from '../../assets/images/Vite-React.png';
 import datePicker from '../../assets/images/Date-Picker.png';
 import elicap from '../../assets/images/Elicap.png';
+import writo from '../../assets/images/writo.png';
 
 const Projects = forwardRef((props, ref) => {
     const projects = [
@@ -67,6 +68,12 @@ const Projects = forwardRef((props, ref) => {
             desc: 'Elicap is a static website created using only HTML and CSS. It showcases a clean and straightforward design, focusing on delivering content efficiently without the need for dynamic elements.',
             link: 'https://elicap.netlify.app/',
             src: elicap
+        },
+        {
+            name: 'SignUp / SignIn Form',
+            desc: 'This project is a full-stack user registration application designed to provide a seamless and secure user authentication experience. The primary functionality of this application is to allow users to register via a signup form and receive a One-Time Password (OTP) for email verification. This project utilizes modern web development technologies, including a backend built with Node.js and Express, a frontend developed with React, and a MongoDB database for data storage. By implementing secure email verification and session management, this project aims to provide a robust foundation for user authentication in web applications.',
+            link: 'https://assessment-writo-education-ui.vercel.app/',
+            src: writo
         },
     ]
     return (
