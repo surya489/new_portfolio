@@ -240,6 +240,18 @@
     padding: 40px 20px;
 }
 
+@media (max-width: 1024px) {
+    .dot.eight {
+        left: 0%;
+        top: 65%;
+    }
+
+    .dot.two {
+        left: 50%;
+        top: 70%;
+    }
+}
+
 @media (max-width: 840px) {
     .hero_section .container {
         padding: 0;
