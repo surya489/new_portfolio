@@ -56,9 +56,9 @@
 .button.download {
     display: block;
     position: fixed;
-    top: 150px;
+    top: 40%;
     right: -70px;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     z-index: 99;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.6);

@@ -4,9 +4,9 @@ import './Button.css';
 
 const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget, submitBtnVal, submitBtnId, isSubmit, alignRight, alignLeft, isIcon }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
-    const downloadClass = `button button download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
+    const downloadClass = `button Nunito download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
-    const submitBtnClass = `button button primary ${className || ''}`;
+    const submitBtnClass = `button primary ${className || ''}`;
     const submitBtnAlign = alignRight ? 'alignRight' : alignLeft ? 'alignLeft' : 'alignCenter';
     const iconClass = `icon_wrap ${className || ''}`;
     if (isLink) {
