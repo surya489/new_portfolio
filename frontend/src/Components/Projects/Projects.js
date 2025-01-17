@@ -15,6 +15,7 @@ import datePicker from '../../assets/images/Date-Picker.png';
 import elicap from '../../assets/images/Elicap.png';
 import writo from '../../assets/images/writo.png';
 import urbanWolv from '../../assets/images/urbanwolv_home.png';
+import parallaxOne from '../../assets/images/parallax_1.png';
 
 const Projects = forwardRef((props, ref) => {
     const projects = [
@@ -81,6 +82,12 @@ const Projects = forwardRef((props, ref) => {
             desc: "Urban Wolv is a dynamic, fashion-forward online clothing store built using WordPress and Elementor. The website offers a seamless shopping experience, showcasing a wide range of trendy and high-quality apparel for both men and women. With a focus on urban-inspired fashion, Urban Wolv brings the latest clothing styles directly to your wardrobe. From casual streetwear to chic office outfits, this site caters to all your fashion needs. Explore the collections, enjoy easy navigation, and shop with confidence as you find the perfect pieces to elevate your style.",
             link: 'https://urbanwolv.com/',
             src: urbanWolv
+        },
+        {
+            name: 'Parallax Website',
+            desc: 'Parallax Website is a visually engaging site built using HTML, CSS, and JavaScript. The hero section features a smooth parallax animation that adds depth and motion, creating an immersive user experience. Below the hero section, the content is filled with placeholder text to demonstrate layout and structure.',
+            link: 'https://parallaxone.netlify.app/',
+            src: parallaxOne
         }
     ]
     return (
