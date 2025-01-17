@@ -148,28 +148,6 @@ const NavBar = () => {
             <About ref={aboutRef} />
             <Projects ref={projectsRef} />
             <Footer ref={footerRef} />
-            <div className="mobile_menu_wrapper">
-                <ul className="mobile_menu_items active">
-                    <li className="menu_item">
-                        <div onClick={() => {
-                            sectionScroll(aboutRef);
-                            setIsMobileMenu(false);
-                        }}>About</div>
-                    </li>
-                    <li className="menu_item">
-                        <div onClick={() => {
-                            sectionScroll(projectsRef);
-                            setIsMobileMenu(false);
-                        }}>Projects</div>
-                    </li>
-                    <li className="menu_item">
-                        <div onClick={() => {
-                            sectionScroll(footerRef);
-                            setIsMobileMenu(false);
-                        }}>Contact</div>
-                    </li>
-                </ul>
-            </div>
         </>
     );
 };
