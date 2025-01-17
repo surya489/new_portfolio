@@ -14,6 +14,7 @@ import blogPage from '../../assets/images/Vite-React.png';
 import datePicker from '../../assets/images/Date-Picker.png';
 import elicap from '../../assets/images/Elicap.png';
 import writo from '../../assets/images/writo.png';
+import urbanWolv from '../../assets/images/urbanwolv_home.png';
 
 const Projects = forwardRef((props, ref) => {
     const projects = [
@@ -75,6 +76,12 @@ const Projects = forwardRef((props, ref) => {
             link: 'https://assessment-writo-education-ui.vercel.app/',
             src: writo
         },
+        {
+            name: 'Urban Wolv',
+            desc: "Urban Wolv is a dynamic, fashion-forward online clothing store built using WordPress and Elementor. The website offers a seamless shopping experience, showcasing a wide range of trendy and high-quality apparel for both men and women. With a focus on urban-inspired fashion, Urban Wolv brings the latest clothing styles directly to your wardrobe. From casual streetwear to chic office outfits, this site caters to all your fashion needs. Explore the collections, enjoy easy navigation, and shop with confidence as you find the perfect pieces to elevate your style.",
+            link: 'https://urbanwolv.com/',
+            src: urbanWolv
+        }
     ]
     return (
         <Center>
