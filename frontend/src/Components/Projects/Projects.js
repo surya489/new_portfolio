@@ -27,67 +27,78 @@ const Projects = forwardRef((props, ref) => {
             CreateUsing: [
                 "Test",
                 "Test"
-            ]
+            ],
+            responsive: false
         },
         {
             name: 'Youtube Clone',
             desc: 'This YouTube Clone is a web application built using React.js, mimicking the core functionalities and design of YouTube. The project showcases a video streaming platform where users can explore different categories and watch videos, providing an intuitive and seamless browsing experience.',
             link: 'https://surya-youtube-clone.netlify.app/',
-            src: youtubeClone
+            src: youtubeClone,
+            responsive: true
         },
         {
             name: 'Fitness Guide',
             desc: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
             link: 'https://bright-croissant-8a96cd.netlify.app/',
-            src: fitnessGuide
+            src: fitnessGuide,
+            responsive: true
         },
         {
             name: 'E-Commerce Site',
             desc: 'This E-Commerce site is a static website designed and developed using HTML, CSS, and JavaScript. The project serves as a showcase of a modern online store, offering users a clean and visually appealing interface for exploring and purchasing products.',
             link: 'https://cara-designs.netlify.app/',
-            src: eCommercePage
+            src: eCommercePage,
+            responsive: false
         },
         {
             name: 'Date Picker',
             desc: 'This site was built using React and features a custom Date Picker component that allows users to set reminders on specific dates. The Date Picker is designed to enhance productivity by enabling users to manage important dates and tasks effectively',
             link: 'https://date-picker-add-reminder.netlify.app/',
-            src: datePicker
+            src: datePicker,
+            responsive: false
         },
         {
             name: 'Blog Page',
             desc: 'This blog page is created using React. It serves as a platform for sharing articles, ideas, and insights. The site is designed to be user-friendly, with a focus on readability and smooth navigation.',
             link: '/',
-            src: blogPage
+            src: blogPage,
+            responsive: false
         },
         {
             name: 'Tool-Tip Layout',
             desc: 'This is a UI layout for tool-tips, created using React and React components. It enhances user interaction by providing informative hover-over elements in a clean and responsive design.',
             link: 'https://tooltip-landing-page.netlify.app/',
-            src: toolTip
+            src: toolTip,
+            responsive: true
         },
         {
             name: 'Elicap',
             desc: 'Elicap is a static website created using only HTML and CSS. It showcases a clean and straightforward design, focusing on delivering content efficiently without the need for dynamic elements.',
             link: 'https://elicap.netlify.app/',
-            src: elicap
+            src: elicap,
+            responsive: false
         },
         {
             name: 'SignUp / SignIn Form',
             desc: 'This project is a full-stack user registration application designed to provide a seamless and secure user authentication experience. The primary functionality of this application is to allow users to register via a signup form and receive a One-Time Password (OTP) for email verification. This project utilizes modern web development technologies, including a backend built with Node.js and Express, a frontend developed with React, and a MongoDB database for data storage. By implementing secure email verification and session management, this project aims to provide a robust foundation for user authentication in web applications.',
             link: 'https://assessment-writo-education-ui.vercel.app/',
-            src: writo
+            src: writo,
+            responsive: true
         },
         {
             name: 'Urban Wolv',
             desc: "Urban Wolv is a dynamic, fashion-forward online clothing store built using WordPress and Elementor. The website offers a seamless shopping experience, showcasing a wide range of trendy and high-quality apparel for both men and women. With a focus on urban-inspired fashion, Urban Wolv brings the latest clothing styles directly to your wardrobe. From casual streetwear to chic office outfits, this site caters to all your fashion needs. Explore the collections, enjoy easy navigation, and shop with confidence as you find the perfect pieces to elevate your style.",
             link: 'https://urbanwolv.com/',
-            src: urbanWolv
+            src: urbanWolv,
+            responsive: true
         },
         {
             name: 'Parallax Website',
             desc: 'Parallax Website is a visually engaging site built using HTML, CSS, and JavaScript. The hero section features a smooth parallax animation that adds depth and motion, creating an immersive user experience. Below the hero section, the content is filled with placeholder text to demonstrate layout and structure.',
             link: 'https://parallaxone.netlify.app/',
-            src: parallaxOne
+            src: parallaxOne,
+            responsive: false
         }
     ]
     return (

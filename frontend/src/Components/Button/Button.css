@@ -76,3 +76,7 @@
     border-color: var(--bg_white);
     background: linear-gradient(45deg, var(--pale_periwinkle), transparent);
 }
+
+.button.isDisabled {
+    cursor: not-allowed;
+}

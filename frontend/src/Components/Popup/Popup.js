@@ -3,7 +3,7 @@ import React from "react";
 import './Popup.css';
 import Button from "../Button/Button";
 
-const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLink }) => {
+const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLink, isResponsive }) => {
     return (
         <div className={`popup_overlay ${className ? className : ''}`} onClick={closePopup}>
             <div className="popup_content" onClick={(e) => e.stopPropagation()}>
@@ -16,7 +16,13 @@ const Popup = ({ src, closePopup, className, projectName, projectdesc, projectLi
                     <div className="col_50 popup_right">
                         <div className="img_wrap">
                             <div className="view_btn_wrap">
-                                <Button isTarget isLink link={projectLink}>View Site</Button>
+                                <Button
+                                    {...(isResponsive
+                                        ? { isTarget: true, isLink: true, link: projectLink }
+                                        : { isDisabled: true })}
+                                >
+                                    View Site
+                                </Button>
                             </div>
                             <div className="sizer"></div>
                             <div

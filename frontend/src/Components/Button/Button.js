@@ -2,7 +2,7 @@ import React from "react";
 
 import './Button.css';
 
-const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget, submitBtnVal, submitBtnId, isSubmit, alignRight, alignLeft, isIcon }) => {
+const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasOverlay, isPopup, openPopup, isTarget, submitBtnVal, submitBtnId, isSubmit, alignRight, alignLeft, isIcon, isDisabled }) => {
     const buttonClass = `button Roboto ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const downloadClass = `button Nunito download ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
     const overlayClass = `linkOverlay ${isPrimary ? 'primary' : 'bordered_btn'} ${className || ''}`;
@@ -42,6 +42,12 @@ const Button = ({ isLink, isDownload, link, isPrimary, children, className, hasO
             <a href={link} className={iconClass}>
                 {children}
             </a>
+        )
+    } else if (isDisabled) {
+        return (
+            <div className={`${buttonClass} isDisabled`}>
+                {children}
+            </div>
         )
     }
     return (

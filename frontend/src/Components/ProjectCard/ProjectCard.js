@@ -9,12 +9,14 @@ const ProjectCard = ({ projects }) => {
     const [ProjectName, setProjectName] = useState('');
     const [description, setDescription] = useState('');
     const [link, setLink] = useState('');
+    const [isResponsive, setIsResponsive] = useState(false);
 
-    const openPopup = (imageSrc, name, desc, link) => {
+    const openPopup = (imageSrc, name, desc, link, responsive) => {
         setSelectedImage(imageSrc);
         setProjectName(name);
         setDescription(desc);
         setLink(link);
+        setIsResponsive(responsive);
         setIsPopupOpen(true);
         document.querySelector('.App').classList.add('stopScroll');
     };
@@ -25,6 +27,7 @@ const ProjectCard = ({ projects }) => {
         setProjectName('');
         setDescription('');
         setLink('');
+        setIsResponsive(false);
         document.querySelector('.App').classList.remove('stopScroll');
     };
 
@@ -46,9 +49,9 @@ const ProjectCard = ({ projects }) => {
                                 <Button
                                     isPrimary
                                     isPopup
-                                    openPopup={() => openPopup(project.src, project.name, project.desc, project.link)}
+                                    openPopup={() => openPopup(project.src, project.name, project.desc, project.link, project.responsive)}
                                 >
-                                    View
+                                    Read More
                                 </Button>
                             </div>
                         </div>
@@ -62,7 +65,7 @@ const ProjectCard = ({ projects }) => {
                     </Button>
                 </div>
             ))}
-            <Popup src={selectedImage} projectName={ProjectName} projectdesc={description} projectLink={link} className={`${isPopupOpen ? 'open' : 'close'}`} closePopup={closePopup} />
+            <Popup src={selectedImage} projectName={ProjectName} projectdesc={description} projectLink={link} isResponsive={isResponsive} className={`${isPopupOpen ? 'open' : 'close'}`} closePopup={closePopup} />
         </div>
     );
 };
